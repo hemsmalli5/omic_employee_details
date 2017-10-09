@@ -1,0 +1,35 @@
+#%RAML 1.0
+title: employee_details_api
+version: 1.0
+baseUri: http://localhost:8081/employee/{version}
+/details:
+  post:
+    body: 
+      application/json:
+        example: |
+          {"Name":"Robin","Age":25,"City":"Fremont"}
+    responses: 
+      200:
+        body:
+          application/json:
+            example: |
+              {"EmployeeId":"15"}
+  /{employeeid}:
+    get:
+      responses: 
+        200:
+          body: 
+            application/json:
+              example: |
+                {"Name":"Robin","Age":25,"City":"Fremont"}
+
+
+
+
+
+        
+
+
+              
+
+
